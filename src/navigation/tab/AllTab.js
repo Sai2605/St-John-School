@@ -65,7 +65,7 @@ const AllTab = ({ navigation, route }) => {
                 </View>),
 
                 tabBarHideOnKeyboard: true,
-                tabBarStyle: { backgroundColor: COLORS.white, height: 60, paddingBottom: 5 },
+                tabBarStyle: { backgroundColor: COLORS.white, height: 60, paddingBottom: 5 ,elevation:10},
                 tabBarActiveTintColor: COLORS.white,
                 tabBarInactiveTintColor: COLORS.gray,
 

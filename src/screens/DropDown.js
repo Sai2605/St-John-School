@@ -71,14 +71,15 @@ export default DropDown;
 
 const styles = StyleSheet.create({
     container: {
-        // backgroundColor: "red",
+        // backgroundColor: "black",
         // padding: 10,
         height: '95%',
-        width: 170,
+        width:SIZES.width/3,
     },
     dropdown: {
         height: 50,
         justifyContent:'center',
+        paddingHorizontal:25,
         // borderColor: 'black',
         // borderWidth: 0.5,
         borderRadius: 8,
@@ -103,14 +104,16 @@ const styles = StyleSheet.create({
         fontSize: SIZES.h4,
         color: COLORS.white,
         fontWeight: FONTWEIGHTS.medium,
-        alignSelf:'center',
-        justifyContent:'flex-end'
-
+        // alignSelf:'center',
+        // backgroundColor:'black',
+        // justifyContent:'flex-end',
+        alignItems:'center'
     },
     selectedTextStyle: {
         fontSize: SIZES.h3,
         color: COLORS.white,
-        paddingLeft:50
+        alignSelf:'center',
+        // paddingLeft:50
         // backgroundColor:"#FFEB3C"
 
     },

@@ -9,6 +9,7 @@ MERGED from [:react-native-vector-icons] E:\react native\School\St-John\node_mod
 MERGED from [com.facebook.react:flipper-integration:0.73.3] C:\Users\PC\.gradle\caches\transforms-3\05ec83e5cef9923925a20a8b4150b312\transformed\jetified-flipper-integration-0.73.3-debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-splash-screen] E:\react native\School\St-John\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:lottie-react-native] E:\react native\School\St-John\node_modules\lottie-react-native\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-async-storage_async-storage] E:\react native\School\St-John\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-dynamically-selected-picker] E:\react native\School\St-John\node_modules\react-native-dynamically-selected-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-gesture-handler] E:\react native\School\St-John\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-image-crop-picker] E:\react native\School\St-John\node_modules\react-native-image-crop-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-31:12
@@ -200,6 +201,8 @@ MERGED from [:react-native-splash-screen] E:\react native\School\St-John\node_mo
 MERGED from [:react-native-splash-screen] E:\react native\School\St-John\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:lottie-react-native] E:\react native\School\St-John\node_modules\lottie-react-native\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:lottie-react-native] E:\react native\School\St-John\node_modules\lottie-react-native\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-async-storage_async-storage] E:\react native\School\St-John\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-async-storage_async-storage] E:\react native\School\St-John\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-dynamically-selected-picker] E:\react native\School\St-John\node_modules\react-native-dynamically-selected-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-dynamically-selected-picker] E:\react native\School\St-John\node_modules\react-native-dynamically-selected-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-gesture-handler] E:\react native\School\St-John\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44

@@ -17,7 +17,7 @@ const Attendance = () => {
             </View>
             <View style={styles.bottom}>
                 <Text style={styles.Text1}>Total attendance</Text>
-                <ProgressBar filledcolor={COLORS.primary} percent={0.5} unfilledcolor={COLORS.gray} width={275} />
+                <ProgressBar filledcolor={COLORS.primary} percent={0.5} unfilledcolor={COLORS.gray} width={275} color={'#000000'}/>
             </View>
         </View>
     )
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginTop: 10,
         marginHorizontal: 8,
-        elevation: 3
+        elevation: 1
 
     },
     header: {

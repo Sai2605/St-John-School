@@ -92,7 +92,7 @@ const AllDrawer = ({ route }) => {
                                         textAlign:'center'
                                         // alignSelf:'center'
                                     }}
-                                >{class_section}</Text>
+                                >Academic Session: 2023 - 2024</Text>
                                 </View>
 
                                

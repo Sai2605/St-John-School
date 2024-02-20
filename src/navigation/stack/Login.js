@@ -7,6 +7,10 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 import { URI } from '../../assets/images';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
+
 const Login = (props) => {
   const [username, setusername] = useState('');
   const [password, setpassword] = useState('');
@@ -41,7 +45,8 @@ const Login = (props) => {
         const dob=json.data.studentInfo.dob;
 
 
-  
+        await AsyncStorage.setItem('username', username);
+
   
         // console.log(name);
   

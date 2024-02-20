@@ -18,6 +18,7 @@ import Notification from './Notification';
 import { COLORS, FONTWEIGHTS, SIZES } from '../../constants'
 import MyBalance from './balance/MyBalance';
 import Dummy from '../../../Dummy';
+import HomeWork from './HomeWork';
 
 
 const Stack = createStackNavigator();
@@ -39,6 +40,15 @@ const AllStack = () => {
             <Stack.Screen name="Referral" component={Referral} />
 
             <Stack.Screen name="AllDrawer" component={ALLDRAWER} />
+              
+            <Stack.Screen name="HomeWorks" component={HomeWork} options={{
+                headerShown: true,
+                title: "Home Work",
+                headerTitleStyle:{color:COLORS.white},
+                headerStyle: styles.container,
+                headerTintColor: COLORS.white
+            }} />
+
             <Stack.Screen name="FullList" component={FullList} options={{
                 headerShown: true,
                 title: "Upcoming Lotto's",
@@ -78,6 +88,6 @@ export default AllStack
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: COLORS.yellow
+        backgroundColor: COLORS.primary,
     }
 })

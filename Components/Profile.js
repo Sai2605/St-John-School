@@ -57,7 +57,7 @@ export default Profile
 const styles = StyleSheet.create({
     Profile: {
         backgroundColor: COLORS.white,
-        elevation: 5,
+        elevation: 2,
         padding: 10
     },
     container: {

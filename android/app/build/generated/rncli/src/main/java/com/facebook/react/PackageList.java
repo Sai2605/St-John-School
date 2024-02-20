@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import com.oblador.vectoricons.VectorIconsPackage;
 // lottie-react-native
 import com.airbnb.android.react.lottie.LottiePackage;
+// @react-native-async-storage/async-storage
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 // react-native-dynamically-selected-picker
 import com.dynamicallyselectedpicker.DynamicallySelectedPickerPackage;
 // react-native-gesture-handler
@@ -80,6 +82,7 @@ public class PackageList {
       new MainReactPackage(mConfig),
       new VectorIconsPackage(),
       new LottiePackage(),
+      new AsyncStoragePackage(),
       new DynamicallySelectedPickerPackage(),
       new RNGestureHandlerPackage(),
       new PickerPackage(),
