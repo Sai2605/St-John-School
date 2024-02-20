@@ -45,7 +45,7 @@ const AllDrawer = ({ route }) => {
 
     const { t } = useTranslation();
     const TAB = lazy(() => import('../tab/AllTab'))
-    const { name,class_section ,roll_number,dob} = route.params;
+    const { name, class_section, roll_number, dob, profile_pic_url } = route.params;
 
 
     const [isLoading, setIsLoading] = useState(true);
@@ -76,37 +76,37 @@ const AllDrawer = ({ route }) => {
                                     backgroundColor: '#FFFFFF',
                                     borderBottomColor: COLORS.white,
                                     borderBottomWidth: 1,
-                                    marginBottom:15
+                                    marginBottom: 15
                                     //  backgroundColor: "red"
                                 }}
                             >
-                                <View style={{ padding: 10, height: '80%', width: '100%',alignItems:'center' }}>
+                                <View style={{ padding: 10, height: '80%', width: '100%', alignItems: 'center' }}>
                                     <Image source={require('./../../assets/images/pic.png')} style={{ width: SIZES.width / 1.5, height: SIZES.height / 8, resizeMode: 'contain' }} />
                                     <Text
-                                    style={{
-                                        width: '100%',
-                                        fontSize: 14,
-                                        fontWeight: "500",
-                                        color: "#111",
-                                        // backgroundColor:'green',
-                                        textAlign:'center'
-                                        // alignSelf:'center'
-                                    }}
-                                >Academic Session: 2023 - 2024</Text>
+                                        style={{
+                                            width: '100%',
+                                            fontSize: 14,
+                                            fontWeight: "500",
+                                            color: "#111",
+                                            // backgroundColor:'green',
+                                            textAlign: 'center'
+                                            // alignSelf:'center'
+                                        }}
+                                    >Academic Session: 2023 - 2024</Text>
                                 </View>
 
-                               
+
 
                             </View>
                             {/* <ScrollView> */}
                             <DrawerItemList {...props} />
 
-                            <View style={{ height: SIZES.height / 5 ,justifyContent:'flex-end',marginBottom:30}}>
+                            <View style={{ height: SIZES.height / 5, justifyContent: 'flex-end', marginBottom: 30 }}>
                                 <TouchableOpacity style={{
-                                    backgroundColor: '#FFFFFF', margin: 20, borderRadius: 5,justifyContent:'center',flexDirection:'row',alignItems:'center'
+                                    backgroundColor: '#FFFFFF', margin: 20, borderRadius: 5, justifyContent: 'center', flexDirection: 'row', alignItems: 'center'
                                 }}>
                                     <FontAwesome name='sign-out' color={COLORS.primary} size={24} />
-                                    <Text style={{padding:10,alignSelf:'center',color:COLORS.primary,fontWeight:'500'}}>LOGOUT</Text>
+                                    <Text style={{ padding: 10, alignSelf: 'center', color: COLORS.primary, fontWeight: '500' }}>LOGOUT</Text>
                                 </TouchableOpacity>
                             </View>
 
@@ -135,8 +135,8 @@ const AllDrawer = ({ route }) => {
                 }
             }}
         >
-            <Drawer.Screen name="AllTab" component={TAB} 
-             initialParams={{ name, class_section ,roll_number,dob}}
+            <Drawer.Screen name="AllTab" component={TAB}
+                initialParams={{ name, class_section, roll_number, dob, profile_pic_url }}
                 options={{
                     title: t('Dashboard'),
                     drawerIcon: ({ size, focused, color }) => {

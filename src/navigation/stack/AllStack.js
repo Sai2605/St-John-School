@@ -19,6 +19,7 @@ import { COLORS, FONTWEIGHTS, SIZES } from '../../constants'
 import MyBalance from './balance/MyBalance';
 import Dummy from '../../../Dummy';
 import HomeWork from './HomeWork';
+import UpcomingEvents from '../../../Components/UpcomingEvents';
 
 
 const Stack = createStackNavigator();
@@ -32,7 +33,7 @@ const ALLDRAWER = lazy(() => import('./../drawer/AllDrawer'))
 const AllStack = () => {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} >
-            
+
             {/* <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} /> */}
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Register" component={REGISTER} />
@@ -40,19 +41,21 @@ const AllStack = () => {
             <Stack.Screen name="Referral" component={Referral} />
 
             <Stack.Screen name="AllDrawer" component={ALLDRAWER} />
-              
+
             <Stack.Screen name="HomeWorks" component={HomeWork} options={{
                 headerShown: true,
                 title: "Home Work",
-                headerTitleStyle:{color:COLORS.white},
+                headerTitleStyle: { color: COLORS.white },
                 headerStyle: styles.container,
                 headerTintColor: COLORS.white
             }} />
 
-            <Stack.Screen name="FullList" component={FullList} options={{
+            <Stack.Screen name="UpcomingEvents" component={UpcomingEvents} options={{
                 headerShown: true,
-                title: "Upcoming Lotto's",
-                headerStyle: styles.container
+                title: "UpcomingEvents",
+                headerTitleStyle: { color: COLORS.white },
+                headerStyle: styles.container,
+                headerTintColor: COLORS.white
             }} />
             <Stack.Screen name="SingleDay" component={SingleDay} options={{
                 headerShown: true,

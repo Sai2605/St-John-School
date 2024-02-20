@@ -3,9 +3,13 @@ import { StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native
 import { COLORS } from '../src/constants';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useNavigation } from '@react-navigation/native';
+
 
 
 const UpcomingEvent = () => {
+    const navigation = useNavigation();
+
 
     const [homeworkData, setHomeworkData] = useState([]);
 
@@ -17,7 +21,7 @@ const UpcomingEvent = () => {
 
                 if (username) {
                     // Make a request to the API using the stored username
-                    const response = await fetch('https://sjpsapi.theshivgames.com/events', {
+                    const response = await fetch('https://sjpsapi.theshivgames.com/dashboard/events', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -46,6 +50,11 @@ const UpcomingEvent = () => {
         fetchHomeworkData();
     }, []);
 
+    const nextPage = () => {
+        navigation.navigate('UpcomingEvents')
+        // navigation.navigate('UpcomingEvents')
+    }
+
 
     // Render item function for the FlatList
     const renderItem = ({ item }) => (
@@ -64,7 +73,7 @@ const UpcomingEvent = () => {
         <View style={styles.full}>
             <View style={styles.header}>
                 <Text style={styles.Text}>Upcoming Events</Text>
-                <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }} onPress={nextPage}>
                     <MaterialCommunityIcons name='share-all' color={COLORS.white} size={20} />
                     <Text style={styles.Text2}>View all</Text>
                 </TouchableOpacity>

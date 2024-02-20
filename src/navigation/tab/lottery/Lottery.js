@@ -18,18 +18,18 @@ import UpcomingEvent from '../../../../Components/UpcomingEvent';
 
 
 
-const Lotteries = ({route}) => {
-  const { name, class_section ,roll_number,dob} = route.params;
+const Lotteries = ({ route }) => {
+  const { name, class_section, roll_number, dob, profile_pic_url } = route.params;
   const { t } = useTranslation();
   // console.log('nameee',name)
 
   return (
 
     <ScrollView style={styles.container} >
-      <Profile name={name} class_section={class_section} roll_number={roll_number} dob={dob}/>
-      <Attendance/>
-      <HomeWork/>
-      <UpcomingEvent/>
+      <Profile name={name} class_section={class_section} roll_number={roll_number} dob={dob} profile_pic_url={profile_pic_url} />
+      <Attendance />
+      <HomeWork />
+      <UpcomingEvent />
 
       {/* //   <View style={styles.headerContainer}>
     //     <Header />
@@ -87,7 +87,7 @@ const Lotteries = ({route}) => {
 const styles = StyleSheet.create({
   Profile: {
     backgroundColor: COLORS.white,
-    padding:10
+    padding: 10
   },
   container: {
     flex: 1,

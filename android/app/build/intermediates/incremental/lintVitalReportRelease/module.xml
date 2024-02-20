@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="D:\Shiv\School\St-John-School\android\app"
+    name=":app"
+    type="APP"
+    maven="Field7:app:"
+    agpVersion="8.1.1"
+    buildFolder="build"
+    bootClassPath="C:\Users\PC\AppData\Local\Android\Sdk\platforms\android-34\android.jar;C:\Users\PC\AppData\Local\Android\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

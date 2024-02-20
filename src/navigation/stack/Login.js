@@ -17,7 +17,7 @@ const Login = (props) => {
 
   const handlepress = async () => {
     const url = 'https://sjpsapi.theshivgames.com/auth';
-  
+
     try {
       const response = await fetch(url, {
         method: 'POST',
@@ -26,39 +26,42 @@ const Login = (props) => {
         },
         body: JSON.stringify({
           username: username,
-          password:password ,
+          password: password,
 
         }),
       });
-  
+
       if (!response.ok) {
         const errorResponse = await response.text();
         throw new Error(`Failed to data Status: ${response.status}, Message: ${errorResponse}`);
       }
-      else{
+      else {
         const json = await response.json();
         // console.log(json.data.studentInfo);
-  
-        const name=json.data.studentInfo.name;
-        const class_section=json.data.studentInfo.class_section;
-        const roll_number=json.data.studentInfo.roll_number;
-        const dob=json.data.studentInfo.dob;
+
+        const name = json.data.studentInfo.name;
+        const class_section = json.data.studentInfo.class_section;
+        const roll_number = json.data.studentInfo.roll_number;
+        const dob = json.data.studentInfo.dob;
+        const profile_pic_url = json.data.studentInfo.profile_pic_url;
+
 
 
         await AsyncStorage.setItem('username', username);
 
-  
+
         // console.log(name);
-  
+
         props.navigation.navigate('AllDrawer', {
-           name: name ,
-           class_section:class_section,
-           roll_number:roll_number,
-           dob:dob
-          })
+          name: name,
+          class_section: class_section,
+          roll_number: roll_number,
+          dob: dob,
+          profile_pic_url: profile_pic_url
+        })
         console.log('success')
       }
-  
+
 
       return json;
     } catch (error) {
@@ -84,11 +87,11 @@ const Login = (props) => {
             placeholder="Email / Username"
             placeholderTextColor={COLORS.gray}
             textAlign='left'
-            style={{width:'100%'}}
+            style={{ width: '100%' }}
             // onKeyPress={press}
             selectionColor={COLORS.gray}
-            // keyboardType="number-pad"
-            // maxLength={10}
+          // keyboardType="number-pad"
+          // maxLength={10}
           />
         </View>
 
@@ -101,24 +104,24 @@ const Login = (props) => {
             placeholder="Password"
             placeholderTextColor={COLORS.gray}
             textAlign='left'
-            style={{width:'100%'}}
+            style={{ width: '100%' }}
             selectionColor={COLORS.gray}
-            // keyboardType="number-pad"
-            // maxLength={10}
+          // keyboardType="number-pad"
+          // maxLength={10}
           />
         </View>
 
 
 
-        <Text style={{ textAlign:'right', fontFamily: 'Inter-Medium' ,width:'80%'}}>Forgot your password?</Text>
+        <Text style={{ textAlign: 'right', fontFamily: 'Inter-Medium', width: '80%' }}>Forgot your password?</Text>
 
         <TouchableOpacity
           onPress={handlepress}
-          style={[styles.buttonText, { backgroundColor:  '#B80900' }]}>
+          style={[styles.buttonText, { backgroundColor: '#B80900' }]}>
           <Text style={styles.buttonText1}>LOGIN</Text>
         </TouchableOpacity>
         <View style={styles.textContainer}>
-          <TouchableOpacity style={{marginVertical:10}}>
+          <TouchableOpacity style={{ marginVertical: 10 }}>
             <Text style={styles.signupText}>© 2021 St. John's Public School Management</Text>
           </TouchableOpacity>
 

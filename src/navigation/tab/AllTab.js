@@ -30,7 +30,7 @@ const LOTTERY = lazy(() => import("./lottery/Lottery"))
 
 const AllTab = ({ navigation, route }) => {
 
-    const { name, class_section, roll_number, dob } = route.params;
+    const { name, class_section, roll_number, dob, profile_pic_url } = route.params;
 
     const { t } = useTranslation();
     console.log('Student names', name)
@@ -65,7 +65,7 @@ const AllTab = ({ navigation, route }) => {
                 </View>),
 
                 tabBarHideOnKeyboard: true,
-                tabBarStyle: { backgroundColor: COLORS.white, height: 60, paddingBottom: 5 ,elevation:10},
+                tabBarStyle: { backgroundColor: COLORS.white, height: 60, paddingBottom: 5, elevation: 10 },
                 tabBarActiveTintColor: COLORS.white,
                 tabBarInactiveTintColor: COLORS.gray,
 
@@ -106,7 +106,7 @@ const AllTab = ({ navigation, route }) => {
             <Tab.Screen
                 name="Lottery"
                 component={LOTTERY}
-                initialParams={{ name, class_section, roll_number, dob }}
+                initialParams={{ name, class_section, roll_number, dob, profile_pic_url }}
                 options={({ route }) => ({
                     headerTitle: () => (
                         <Text style={{ color: COLORS.white, fontSize: 14 }}>
